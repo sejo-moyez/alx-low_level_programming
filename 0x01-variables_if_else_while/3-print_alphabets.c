@@ -1,6 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
-/* more headers goes there */
+/**
+ * main - prints alphabet in small and caps
+ *
+ * Return: 0 
+ */
 
 /* betty style doc for function main goes there */
 int main(void)
