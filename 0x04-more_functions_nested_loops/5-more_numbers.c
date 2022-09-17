@@ -15,12 +15,12 @@ void more_numbers(void)
 		{
 			if (y > 9)
 			{
-				putchar(49);
+				_putchar(49);
 			}
 
-			putchar((y % 10) + '0');
+			_putchar((y % 10) + '0');
 		}
 
-		putchar('\n');
+		_putchar('\n');
 	}
 }
