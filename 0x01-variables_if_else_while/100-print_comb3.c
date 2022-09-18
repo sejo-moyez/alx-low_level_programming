@@ -11,8 +11,7 @@ int main(void)
 
 	for (a = 48; a <=56; a++)
 	{
-		for (b = 49;b <=57; b++)
-		
+		for (b = 49;b <=57; b++)	
 		{
 		if (a == b)
 			continue;
@@ -21,7 +20,7 @@ int main(void)
 		putchar (',');
 		putchar (' ');
 		}
-
 	}
 	putchar ('\n');
+	return (0);
 }
