@@ -5,7 +5,7 @@
 *main - prints all possible combinations of numbers
 *Return: always 0
 */
-int main()
+int main(void)
 {
 	int a, b;
 
@@ -15,7 +15,7 @@ int main()
 		
 		{
 		if (a == b)
-		continue;
+			continue;
 		putchar (a);
 		putchar (b);
 		putchar (',');
@@ -24,5 +24,4 @@ int main()
 
 	}
 	putchar ('\n');
-	return (0);
 }
