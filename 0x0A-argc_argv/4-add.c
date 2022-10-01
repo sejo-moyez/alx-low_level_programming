@@ -1,28 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-  *main - prints the result of multiplication of two numbers
-  *
-  *@argc: number of arguments
-  *@argv: array of arguments passed
-  *
-  *Return: 0
+ * main - Prints the addition of the arguments
+ * @argc: Number of arguments passed
+ * @argv: Pointer to array of arguments passed
+ *
+ * Return: 0 - Success
  */
-
 int main(int argc, char *argv[])
 {
-	int count;
-	int sum = 0;
-	
-	for (count = 1; count < argc; count++)
+	int i;
+	int j = 0;
+	unsigned int add = 0;
+
+	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[count]))
+		while (*(*(argv + i) + j) != '\0')
 		{
-			printf("Error\n");
-			return (1);
+			if ((*(*(argv + i) + j) >= '0' && *(*(argv + i) + j) <= '9')
+			|| *(*(argv + i) + j) == '-')
+			{
+				j++;
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		sum += atoi(argv[count]);
+		j = 0;
+
+		if (atoi(argv[i]) > 0)
+			add += atoi(argv[i]);
 	}
-	printf("%d\n", sum);
+	printf("%d\n", add);
 	return (0);
 }
