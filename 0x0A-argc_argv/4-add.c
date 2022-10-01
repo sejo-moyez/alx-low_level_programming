@@ -13,11 +13,7 @@ int main(int argc, char *argv[])
 {
 	int count;
 	int sum = 0;
-
-	if (argc == 1)
-	{
-		printf("%d\n", 0);
-	}
+	
 	for (count = 1; count < argc; count++)
 	{
 		if (!atoi(argv[count]))
