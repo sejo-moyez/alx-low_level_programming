@@ -14,7 +14,7 @@ int is_prime_number(int n)
 
 /**
  * get_prime - Get the square root recursively
- * @n: Number to evaluate if it is a prime number
+ * @k: Number to evaluate if it is a prime number
  * @i: Iterator
  *
  * Return: 1 - Prime number | 0 - Not prime number.
