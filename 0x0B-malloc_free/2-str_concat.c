@@ -26,8 +26,10 @@ char *str_concat(char* s1, char * s2)
     for (i = 0; i< len_1; i++)
         m[i] = s1[i];
     for (i = 0; i< len_2; i++)
+    {
         m ++;
         *m = s2[i];
+    }
     m ++;
     *m = '\0';
     
@@ -45,7 +47,9 @@ int strl_len(char *str)
     int len = 0;
 
     while(*str == '\0')
+    {
         len ++;
         str ++;
+    }
     return(len);
 }
