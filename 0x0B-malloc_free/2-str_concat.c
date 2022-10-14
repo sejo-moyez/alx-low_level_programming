@@ -1,58 +1,39 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
-
 /**
-  * str_concat - Concatenates two strings of any size
-  * @s1: the first string to concatenate
-  * @s2: the second string to concatenate
-  *
-  * Return: the two strings concatenated
-  */
+ * str_concat - concat 2 string
+ * @s1:string1
+ * @s2:string2
+ * Return:char
+ */
 
-int strl_len(char *str);
-
-char *str_concat(char* s1, char * s2)
+char *str_concat(char *s1, char *s2)
 {
-    int i;
-    char *m;
- int len_1;
- int len_2;
- 
- if (s1 == NULL)
-  s1 = "";
- if (s2 == NULL)
-  s2 = "";
-    
-    len_1 = strl_len(s1);
-    len_2 = strl_len(s2);
-    
-    m = malloc ((len_1 + len_2 +1)* sizeof(char));
-    if (m == NULL)
-        return(NULL);
-    for (i = 0; i< len_1; i++)
-        m[i] = s1[i];
-    for (i = 0; i < len_2; i++)
-        m[len_1 + i] = s2[i];
-    m[len_1 + len_2] = '\0';
-    
-    return(m);
-    
-}
-/**
-  * str_len - checks the lenth of a string
-  * @s1: string to be checked for 
-  *
-  * Return: the lengthe of the string
-  */
-int strl_len(char *str)
-{
-    int len = 0;
+	unsigned int i, j, k, l;
+	char *s;
 
-    while(*str != '\0')
-    {
-        len ++;
-        str ++;
-    }
-    return(len);
+	if (s1 == NULL)
+		i = 0;
+	else
+	{
+		for (i = 0; s1[i]; i++)
+			;
+	}
+	if (s2 == NULL)
+		j = 0;
+	else
+	{
+		for (j = 0; s2[j]; j++)
+			;
+	}
+	k = i + j + 1;
+	s = malloc(k * sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	for (l = 0; l < i; l++)
+		s[l] = s1[l];
+	for (l = 0; l < j; l++)
+		s[l + i] = s2[l];
+	s[i + j] = '\0';
+	return (s);
 }
