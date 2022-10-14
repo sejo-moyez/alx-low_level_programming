@@ -25,13 +25,9 @@ char *str_concat(char* s1, char * s2)
         return(NULL);
     for (i = 0; i< len_1; i++)
         m[i] = s1[i];
-    for (i = 0; i< len_2; i++)
-    {
-        m ++;
-        *m = s2[i];
-    }
-    m ++;
-    *m = '\0';
+    for (i = 0; i < len_2; i++)
+        m[len_1 + i] = s2[i];
+    m[len_1 + len_2] = '\0';
     
     return(m);
     
