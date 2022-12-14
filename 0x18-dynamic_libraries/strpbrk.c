@@ -1,19 +1,25 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
-*_isalpha - determines is character is alpha
-*
-*@c: character to be determined
-*
-*Return: 1 if alpha, 0 anything else
+* _strpbrk - search string for set of bytes
+* @s: string to search
+* @accept: bytes to match
+* Return: matching bytes or NULL
 */
-int _isalpha(int c)
+
+char *_strpbrk(char *s, char *accept)
 {
-	if ((c > 96 && c < 123) || (c > 64 && c < 91))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+int i, j;
+for (i = 0; s[i] != '\0'; i++)
+{
+for (j = 0; accept[j] != '\0'; j++)
+{
+if (accept[j] == s[i])
+{
+return (s + i);
+}
+}
+}
+return (NULL);
 }
